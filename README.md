@@ -25,3 +25,22 @@
 
 
 3. Servlet
+
+
+# 웹 프로그래밍과 관련이 있는 전공 지식
+
+1. Non-blocking
+
+- Non-blocking algorithm
+- Non-blocking I/O
+
+2. Concurrency VS Parallelism
+
+3. Asynchronous Programming
+
+
+## 출처
+
+* https://www.edwith.org/boostcourse-web/joinLectures/12952
+
+* https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
