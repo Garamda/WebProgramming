@@ -24,7 +24,17 @@
 - 자원 이용의 효율성, 장애 극복, 배포와 유지보수의 편의성을 위해 웹 서버와 WAS를 대체로 분리한다.
 
 
-3. Servlet
+3. 자바 웹 어플리케이션(Java Web Application)
+
+- WAS에 설치(deploy)되어 동작하는 어플리케이션
+- HTML, CSS, 이미지, Java Class(Servlet, Package, Interface 등), 각종 설정 파일 등이 포함
+
+
+4. Servlet
+
+- 자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역할
+- WAS에 동작하는 Java 클래스
+- Servlet은 HttpServlet 클래스를 상속받아야 함
 
 
 # 웹 프로그래밍과 관련이 있는 전공 지식
