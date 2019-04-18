@@ -41,8 +41,9 @@
 - WAS에 동작하는 Java 클래스
 - Servlet은 HttpServlet 클래스를 상속받아야 함
 
+<br>
 
-# 웹 프로그래밍과 관련이 있는 전공 지식
+## 웹 프로그래밍과 관련이 있는 전공 지식
 
 1. Non-blocking
 
