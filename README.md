@@ -43,6 +43,12 @@
 
 <br>
 
+6. HttpServletRequest
+
+<br>
+
+7. HttpServletResponse
+
 ## 웹 프로그래밍과 관련이 있는 전공 지식
 
 1. Non-blocking
@@ -50,10 +56,19 @@
 - Non-blocking algorithm
 - Non-blocking I/O
 
+<br>
+
 2. Concurrency VS Parallelism
+
+<br>
 
 3. Asynchronous Programming
 
+<br>
+
+4. Cookie VS Session
+
+<br>
 
 ## 출처
 
