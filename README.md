@@ -43,6 +43,22 @@
 
 <br>
 
+6. Servlet의 생명 주기
+- init()
+- service(request, response)
+- destroy()
+
+<br>
+
+WAS는 서블릿 요청을 받으면 해당 서블릿이 메모리에 있는지 확인함.
+메모리에 없다면, 해당 서블릿 클래스를 메모리에 올린 후 
+
+- init() 메소드를 실행
+- service() 메소드를 실행
+
+WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 destroy() 메소드를 실행
+
+
 6. HttpServletRequest
 
 <br>
