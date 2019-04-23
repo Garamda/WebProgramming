@@ -160,11 +160,24 @@ cf) 두 개념은 서로 의존관계가 없이 분리되어 있는 개념. (Par
 
 Session의 저장 방식
 
-1) In memory
 
-2) File storage
+저장 방식 | 단점
+:---: | :---: | :---:
+In memory | 서버 중단 시 이전 세션의 정보 저장 불가능
+File storage | 서버 증설 및 다른 기기를 통한 동일 클라이언트의 접속 시 같은 유저임을 판별하기 어려움
 
-3) Database storage
+-> Database storage : DB상의 유저 정보와 함께 
+
+<br>
+
+
+5. 일급 컬렉션 (First Class Collection)
+
+
+
+6. SOLID : 객체 지향 개발의 5대 원리
+
+- http://www.nextree.co.kr/p6960/?fbclid=IwAR0uL_OPI5kAx8r1yH6bObZ3MpfyckHkqWaEZ1gLwI-M-tU1KvuUuQ7D-1A
 
 <br>
 
