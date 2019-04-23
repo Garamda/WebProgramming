@@ -150,6 +150,22 @@ cf) 두 개념은 서로 의존관계가 없이 분리되어 있는 개념. (Par
 
 4. Cookie VS Session
 
+- Stateless Protocol(http)을 극복하고자 클라이언트 / 서버에 상태를 저장하는 것 
+
+- Cookie : 유저의 상태를 클라이언트에 저장
+
+- Session : 유저의 상태를 서버에 저장
+
+<br>
+
+Session의 저장 방식
+
+1) In memory
+
+2) File storage
+
+3) Database storage
+
 <br>
 
 ## 출처
@@ -157,3 +173,5 @@ cf) 두 개념은 서로 의존관계가 없이 분리되어 있는 개념. (Par
 * https://www.edwith.org/boostcourse-web/joinLectures/12952
 
 * https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
+
+* https://devhaks.github.io/2019/04/20/session-strategy/?fbclid=IwAR0Y6_dIH5qy3KAOARe9kGru0XsJFassd1948LW9YLDNQGWulypk9DLK1t0
