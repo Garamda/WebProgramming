@@ -162,18 +162,18 @@ Session의 저장 방식
 
 
 저장 방식 | 단점
-:---: | :---: | :---:
+:---: | :---:
 In memory | 서버 중단 시 이전 세션의 정보 저장 불가능
 File storage | 서버 증설 및 다른 기기를 통한 동일 클라이언트의 접속 시 같은 유저임을 판별하기 어려움
 
--> Database storage : DB상의 유저 정보와 함께 
+-> Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점들을 모두 극복할 수 있음
 
 <br>
 
 
 5. 일급 컬렉션 (First Class Collection)
 
-
+<br>
 
 6. SOLID : 객체 지향 개발의 5대 원리
 
