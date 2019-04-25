@@ -45,6 +45,8 @@
 
 - 자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역할
 
+- Annotation과 함께 사용하는 URL Mapping을 통해 URL 요청을 처리할 수 있다.
+
 - WAS에 동작하는 Java 클래스
 
 - Servlet은 HttpServlet 클래스를 상속받아야 함
