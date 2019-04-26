@@ -97,23 +97,25 @@ WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 des
 
 <img src="https://github.com/Garamda/WebProgramming/blob/master/HttpServletRequestResponse.PNG" width=80%>
 
-WAS는 웹 브라우저로부터 Servlet요청을 받으면,
+WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
 - 요청할 때 가지고 있는 정보를 HttpServletRequest 객체를 생성하여 저장
 
-- 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse객체를 생성
+- 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse 객체를 생성
 
 - 생성된 HttpServletRequest, HttpServletResponse 객체를 서블릿에 전달
+
+- 즉, HttpServletRequest, HttpServletResponse 생성의 주체는 WAS
 
 <br> 
 
 7. HttpServletRequest
 
-- http프로토콜의 request 정보를 서블릿에게 전달하기 위한 목적으로 사용
+- http 프로토콜의 request 정보를 서블릿에 전달
 
 - 헤더정보, 파라미터, 쿠키, URI, URL 등의 정보를 읽어 들이는 메소드를 가지고 있음
 
-- Body의 Stream을 읽어 들이는 메소드를 가지고 있음
+- Body의 Stream을 읽어 들이는 메소드를 가지고 있음 -> *** Body의 Stream이라는 것은 정확히 무슨 뜻일까?
 
 
 <br>
@@ -121,9 +123,9 @@ WAS는 웹 브라우저로부터 Servlet요청을 받으면,
 8. HttpServletResponse
 
 
-- WAS는 어떤 클라이언트가 요청을 보냈는지 알고 있고, 해당 클라이언트에게 응답을 보내기 위한 HttpServleResponse 객체를 생성하여 서블릿에게 전달
+- WAS는 어떤 클라이언트가 요청을 보냈는지 알고 있고, 해당 클라이언트에게 응답을 보내기 위한 HttpServleResponse 객체를 생성하여 서블릿에 전달
 
-- 서블릿은 해당 객체를 이용하여 content type, 응답코드, 응답 메시지등을 전송
+- 서블릿은 이 객체를 통해 content type, 응답 코드, 응답 메시지 등을 전송
 
 <br>
 
