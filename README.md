@@ -94,16 +94,13 @@ WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 des
 
 - 요청과 응답 
 
-<img src="https://github.com/Garamda/WebProgramming/blob/master/HttpServletRequestResponse.PNG" width=80%>
+<img src="https://github.com/Garamda/WebProgramming/blob/master/HttpServletRequestResponse.PNG" width=80%> 
 
 WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
      - 요청할 때 가지고 있는 정보를 HttpServletRequest 객체를 생성하여 저장
-
      - 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse 객체를 생성
-
      - 생성된 HttpServletRequest, HttpServletResponse 객체를 서블릿에 전달
-
      - 즉, HttpServletRequest, HttpServletResponse 생성의 주체는 WAS
 
 <br> 
@@ -132,32 +129,21 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
 - Non-blocking
 
-     - Non-blocking algorithm
+     - Non-blocking algorithm : 어떤 쓰레드에서 오류가 발생하거나 멈추었을 때 다른 쓰레드에게 영향을 끼치지 않도록 만드는 방법
+     - ex) Wait-freedom, Lock-freedom
 
 <br>
 
-어떤 쓰레드에서 오류가 발생하거나 멈추었을 때 다른 쓰레드에게 영향을 끼치지 않도록 만드는 방법
+- Non-blocking I/O : 입출력 처리는 시작만 해둔 채 완료되지 않은 상태에서, 다른 처리 작업을 계속 진행할 수 있도록 멈추지 않고 입출력 처리를 기다리는 방법.
 
-ex) Wait-freedom, Lock-freedom
-
-<br>
-
-- Non-blocking I/O
-
-<br>
-
-입출력 처리는 시작만 해둔 채 완료되지 않은 상태에서, 다른 처리 작업을 계속 진행할 수 있도록 멈추지 않고 입출력 처리를 기다리는 방법.
-
-cf) I/O 작업이 완료된 이후에 처리해야하는 후속 작업이 있다면, I/O 작업이 완료될 때까지 기다려야 한다. 이 후속 작업이 프로세스를 멈추지 않아야 하므로, I/O 작업이 완료된 이후 후속 작업을 이어서 진행할 수 있도록 별도의 약속(Polling, Callback function 등)을 함.
+     - cf) I/O 작업이 완료된 이후에 처리해야하는 후속 작업이 있다면, I/O 작업이 완료될 때까지 기다려야 한다. 이 후속 작업이 프로세스를 멈추지 않아야 하므로, I/O 작업이 완료된 이후 후속 작업을 이어서 진행할 수 있도록 별도의 약속(Polling, Callback function 등)을 함.
 
 <br>
 
 - Concurrency VS Parallelism
 
      - Concurrency : 각 프로그램의 부분들이 실행 순서와 무관하게 동작할 수 있도록 만들어, 한 번에 여러 개의 작업을 처리할 수 있도록 만든 구조. 즉, 하나의 작업자가 여러 개의 작업을 번갈아가며 수행할 수 있도록 만드는 것.
-
-<br>
-
+     
      - Parallelism : 많은 작업을 물리적으로 동시에 수행하는 것으로써, 작업자를 물리적으로 여럿 둠으로써 같은 작업을 동시에 수행할 수 있도록 만드는 것.
 
 <br>
@@ -188,7 +174,7 @@ Session의 저장 방식
 In memory | 서버 중단 시 이전 세션의 정보 저장 불가능
 File storage | 서버 증설 및 다른 기기를 통한 동일 클라이언트의 접속 시 같은 유저임을 판별하기 어려움
 
--> Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점들을 모두 극복할 수 있음
+Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점들을 모두 극복할 수 있음
 
 <br>
 
