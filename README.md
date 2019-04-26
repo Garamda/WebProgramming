@@ -194,6 +194,7 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 <br>
 
 - RequestBody VS RequestParam
+
      - RequestBody
           - Body 자체를 가져오므로 POST 에서만 사용 가능함
           - 주로 객체 단위로 받아 사용
@@ -209,3 +210,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
 
 * https://devhaks.github.io/2019/04/20/session-strategy/?fbclid=IwAR0Y6_dIH5qy3KAOARe9kGru0XsJFassd1948LW9YLDNQGWulypk9DLK1t0
+
+* https://github.com/occidere/notepad/issues/41
