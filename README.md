@@ -1,16 +1,9 @@
 # 웹 프로그래밍
 
-- 브라우저
+<br>
 
-     - Parser : 데이터를 해석
+# BackEnd
 
-     - Rendering Engine : 데이터를 화면에 표현
-
-     - Parser와 Rendering Engine이 html, css를 처리하는 과정
-
-     
-     <img src="https://github.com/Garamda/WebProgramming/blob/master/parsingtree.png" width=60%>
-     
 <br>
 
 - WAS
@@ -123,7 +116,23 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
      - 서블릿은 이 객체를 통해 content type, 응답 코드, 응답 메시지 등을 전송
 
+<br>
 
+# FrontEnd
+
+- 브라우저
+
+     - Parser : 데이터를 해석
+
+     - Rendering Engine : 데이터를 화면에 표현
+
+     - Parser와 Rendering Engine이 html, css를 처리하는 과정
+
+     
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/parsingtree.png" width=60%>
+
+<br> 
+     
 - DOM tree (Document Object Model tree)
 
      <img src="https://github.com/Garamda/WebProgramming/blob/master/domtree.png" width=40%> 
