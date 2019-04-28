@@ -123,6 +123,24 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
      - 서블릿은 이 객체를 통해 content type, 응답 코드, 응답 메시지 등을 전송
 
+
+- DOM tree (Document Object Model tree)
+
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/domtree.png" width=40%> 
+
+     - 브라우저에서는 html element를 DOM tree로 저장합니다.
+
+     - 복잡한 DOM Tree를 탐색하기 위해 다양한 DOM API를 활용합니다.
+     
+     
+- Event
+
+
+- Ajax
+
+
+- JSP (Java Server Page)
+
 <br>
 
 ## 웹 프로그래밍과 관련이 있는 지식
