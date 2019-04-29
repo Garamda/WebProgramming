@@ -245,17 +245,26 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
      
           - ㅇㅇ
      
-     
+
+- Redis
+
+     - https://goodgid.github.io/Redis/
 <br>
 
 ## 출처
 
-* https://www.edwith.org/boostcourse-web/joinLectures/12952
+* Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
 
-* https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
+* Non-blocking, Asynchronous, and Concurrency : https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
 
-* https://devhaks.github.io/2019/04/20/session-strategy/?fbclid=IwAR0Y6_dIH5qy3KAOARe9kGru0XsJFassd1948LW9YLDNQGWulypk9DLK1t0
+* [Session] 웹 서버 개발의 Session 전략 : https://devhaks.github.io/2019/04/20/session-strategy/?fbclid=IwAR0Y6_dIH5qy3KAOARe9kGru0XsJFassd1948LW9YLDNQGWulypk9DLK1t0
 
-* https://github.com/occidere/notepad/issues/41
+* [Spring] RequestParam과 RequestBody의 차이 : https://github.com/occidere/notepad/issues/41
 
-* http://channy.creation.net/articles/microservices-by-james_lewes-martin_fowler
+* [Micro Service Architecture] : http://channy.creation.net/articles/microservices-by-james_lewes-martin_fowler
+
+* [Redis] 개념과 특징 : https://goodgid.github.io/Redis/
+
+* [SOLID] 객체지향 개발 5대 원리 : http://www.nextree.co.kr/p6960/?fbclid=IwAR0uL_OPI5kAx8r1yH6bObZ3MpfyckHkqWaEZ1gLwI-M-tU1KvuUuQ7D-1A
+
+* [Git] 좋은 Git 커밋 메시지를 작성하는 방법 : https://meetup.toast.com/posts/106
