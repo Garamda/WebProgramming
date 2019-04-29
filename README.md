@@ -230,6 +230,24 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 <br>
 
+- Micro Service Architecture (MSA)
+
+     - 각 서비스는 독립적으로 배치 가능, 확장 가능
+     - 각 서비스는 서로 다른 프로그래밍 언어로 개발 가능 
+     - 각 서비스는 그것을 만든 팀들이 직접 관리할 수 있음
+     
+     - cf) Monolithic Architecture의 문제점
+          - 배포 주기를 늘리는 것이 점점 어려워짐
+          - 작은 부분에 대한 변경으로 인해 모드 빌드 후 다시 배포해야 함 
+          - 각 모듈의 변경 사항을 그 모듈에만 한정하는 것도 어려움
+     
+     - MSA의 특징
+     
+          - ㅇㅇ
+     
+     
+<br>
+
 ## 출처
 
 * https://www.edwith.org/boostcourse-web/joinLectures/12952
@@ -239,3 +257,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * https://devhaks.github.io/2019/04/20/session-strategy/?fbclid=IwAR0Y6_dIH5qy3KAOARe9kGru0XsJFassd1948LW9YLDNQGWulypk9DLK1t0
 
 * https://github.com/occidere/notepad/issues/41
+
+* http://channy.creation.net/articles/microservices-by-james_lewes-martin_fowler
