@@ -116,6 +116,47 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
 <br>
 
+
+- Redirect
+
+     - 서버가 클라이언트의 요청에 대해, 특정 URL로 이동을 요청하는 것
+     - 동작 과정
+          - HTTP Response Code : 302
+          - Header : Location 값에 redirect URL을 추가
+          - 클라이언트는 리다이렉션 응답을 받게 되면 헤더(Location)에 포함된 URL로 재요청
+          - 즉, redirect 시 클라이언트는 2번의 요청을 보내게 됨
+          - 때문에 첫 요청과 두 번째 요청의 Request, Response는 다른 객체 
+          - 클라이언트는 서버로부터 받은 상태 값이 302이면 Location 헤더값으로 재요청
+          - 서블릿은 HttpServletResponse 클래스의 sendRedirect() 메소드를 사용함
+     
+<img src="https://github.com/Garamda/WebProgramming/blob/master/redirect.PNG" width=80%>
+
+
+<br>
+
+- Forward
+
+     - 요청을 처리하던 한 서블릿이 추가적인 처리를 (같은 웹 어플리케이션의) 다른 서블릿에게 위임하는 것
+     - 동작 과정
+          - 웹 브라우저에서 Servlet 1에게 요청을 보냄
+          - Servlet1은 요청을 처리한 후, 그 결과를 HttpServletRequest에 저장
+          - Servlet1은 결과가 저장된 HttpServletRequest와 응답을 위한 HttpServletResponse를 같은 웹 어플리케이션 안에 있는 Servlet2에게 전송(forward)
+          - Servlet2는 Servlet1으로 부터 받은 HttpServletRequest와 HttpServletResponse를 이용하여 요청을 처리한 후 웹 브라우저에게 결과를 전송
+
+
+<img src="https://github.com/Garamda/WebProgramming/blob/master/forward.png" width=80%>
+
+<br>
+
+- Redirect & Forward 비교
+
+비교 | Redirect | Forward
+:---: | :---: | :---:
+URL 주소 | O | X
+요청 | 2번 (서로 다른 요청/응답 객체) | 1번
+
+<br>
+
 - Scope
 
 <br>
@@ -176,43 +217,6 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
           * 서블릿 코드를 컴파일해서 실행가능한 bytecode로 변환한다. (class 파일 생성)
           * 서블릿 클래스를 로딩하고 인스턴스를 생성한다.
           * 서블릿이 실행되어 요청을 처리하고 응답 정보를 생성한다.
-
-<br>
-
-- Redirect
-     - 서버가 클라이언트의 요청에 대해, 특정 URL로 이동을 요청하는 것
-     - 동작 과정
-          - HTTP Response Code : 302
-          - Header : Location 값에 redirect URL을 추가
-          - 클라이언트는 리다이렉션 응답을 받게 되면 헤더(Location)에 포함된 URL로 재요청
-          - 즉, redirect 시 클라이언트는 2번의 요청을 보내게 됨
-          - 때문에 첫 요청과 두 번째 요청의 Request, Response는 다른 객체 
-          - 클라이언트는 서버로부터 받은 상태 값이 302이면 Location 헤더값으로 재요청
-          - 서블릿은 HttpServletResponse 클래스의 sendRedirect() 메소드를 사용함
-     
-<img src="https://github.com/Garamda/WebProgramming/blob/master/redirect.PNG" width=80%>
-
-
-<br>
-
-- Forward
-     - 요청을 처리하던 한 서블릿이 추가적인 처리를 (같은 웹 어플리케이션의) 다른 서블릿에게 위임하는 것
-     - 동작 과정
-          - 웹 브라우저에서 Servlet 1에게 요청을 보냄
-          - Servlet1은 요청을 처리한 후, 그 결과를 HttpServletRequest에 저장
-          - Servlet1은 결과가 저장된 HttpServletRequest와 응답을 위한 HttpServletResponse를 같은 웹 어플리케이션 안에 있는 Servlet2에게 전송(forward)
-          - Servlet2는 Servlet1으로 부터 받은 HttpServletRequest와 HttpServletResponse를 이용하여 요청을 처리한 후 웹 브라우저에게 결과를 전송
-
-
-<img src="https://github.com/Garamda/WebProgramming/blob/master/forward.png" width=80%>
-
-- Redirect & Forward 비교
-
-비교 | Redirect | Forward
-:---: | :---: | :---:
-URL 주소 | O | X
-요청 | 2번 (서로 다른 요청/응답 객체) | 1번
-
 <br>
 
 ## 웹 프로그래밍과 관련이 있는 지식
