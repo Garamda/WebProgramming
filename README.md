@@ -149,6 +149,19 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
 
 - JSP (Java Server Page)
+     - JSP는 WAS에 의해 서블릿으로 바뀌어 동작함 (<% %>에 해당하는 부분)
+     - JSP Life Cycle
+     
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/jspLifecycle.png" width=40%> 
+     
+     - 서블릿과 유사한 라이프 사이클로 이해할 수 있다.
+     
+     - 실행 순서
+          * 브라우저가 웹서버에 JSP에 대한 요청 정보를 전달한다.
+          * 브라우저가 요청한 JSP가 최초로 요청했을 경우만 JSP로 작성된 코드가 서블릿으로 코드로 변환한다. (java 파일 생성)
+          * 서블릿 코드를 컴파일해서 실행가능한 bytecode로 변환한다. (class 파일 생성)
+          * 서블릿 클래스를 로딩하고 인스턴스를 생성한다.
+          * 서블릿이 실행되어 요청을 처리하고 응답 정보를 생성한다.
 
 <br>
 
