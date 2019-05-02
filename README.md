@@ -333,6 +333,10 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
      - https://goodgid.github.io/Redis/
 <br>
 
+- https
+
+<br>
+
 ## 출처
 
 * Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
@@ -350,3 +354,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [SOLID] 객체지향 개발 5대 원리 : http://www.nextree.co.kr/p6960/?fbclid=IwAR0uL_OPI5kAx8r1yH6bObZ3MpfyckHkqWaEZ1gLwI-M-tU1KvuUuQ7D-1A
 
 * [Git] 좋은 Git 커밋 메시지를 작성하는 방법 : https://meetup.toast.com/posts/106
+
+* [https] https://webactually.com/2018/11/http%EC%97%90%EC%84%9C-https%EB%A1%9C-%EC%A0%84%ED%99%98%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/
