@@ -42,6 +42,9 @@
      - WAS에 동작하는 Java 클래스
 
      - Servlet은 HttpServlet 클래스를 상속받아야 함
+     
+     - Servlet과 JSP로부터 최상의 결과를 얻으려면, 두 가지를 조화롭게 사용해야 함
+     - ex) 웹 페이지를 구성 화면(html)은 JSP로, 복잡한 프로그래밍은 서블릿으로 구현
 
 <br>
 
@@ -129,7 +132,8 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
      - 예제 코드
      
 redirect01.jsp
-     ```response.sendRedirect("redirect02.jsp");```
+
+```response.sendRedirect("redirect02.jsp");```
 
 
 <img src="https://github.com/Garamda/WebProgramming/blob/master/redirect2.PNG" width=80%>
@@ -145,6 +149,7 @@ redirect01.jsp
           - Servlet1은 요청을 처리한 후, 그 결과를 HttpServletRequest에 저장
           - Servlet1은 결과가 저장된 HttpServletRequest와 응답을 위한 HttpServletResponse를 같은 웹 어플리케이션 안에 있는 Servlet2에게 전송(forward)
           - Servlet2는 Servlet1으로 부터 받은 HttpServletRequest와 HttpServletResponse를 이용하여 요청을 처리한 후 웹 브라우저에게 결과를 전송
+
 
      - 예제 코드
      
@@ -176,9 +181,23 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
      int takenValue = (Integer)request.getAttribute("key");
 }
 ```
-
 <img src="https://github.com/Garamda/WebProgramming/blob/master/forward.png" width=80%>
 
+
+<br>
+
+- Servlet과 JSP 연동
+     - Servlet은 프로그램 로직을 수행하기에 유리
+     - JSP는 결과를 출력하기에 유리(html)
+     - Servlet에서 프로그램 로직을 수행
+     - 그 결과를 JSP에 포워딩
+     - 예제 코드
+     ```
+        request.setAttribute("key", value);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/result.jsp");
+        requestDispatcher.forward(request, response);
+     ```
+     
 <br>
 
 - Redirect & Forward 비교
