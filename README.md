@@ -140,6 +140,36 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
           - Servlet1은 결과가 저장된 HttpServletRequest와 응답을 위한 HttpServletResponse를 같은 웹 어플리케이션 안에 있는 Servlet2에게 전송(forward)
           - Servlet2는 Servlet1으로 부터 받은 HttpServletRequest와 HttpServletResponse를 이용하여 요청을 처리한 후 웹 브라우저에게 결과를 전송
 
+     - 예제 코드
+     
+FrontServlet.java
+     
+```
+protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            
+     // forward로 보내고자 하는 값을 HttpServletRequest 객체에 설정
+     request.setAttribute("key", value);
+            
+     // RequestDispatcher : 1) 클라이언트로부터 최초로 들어온 요청을 JSP/Servlet 내에서 원하는 자원으로 요청을 넘기는 역할을 수행
+     //                     2) 특정 자원에 처리를 요청하고 처리 결과를 얻어오는 기능을 수행하는 클래스
+     // RequestDispatcher 객체에 forward url mapping을 함
+     RequestDispatcher requestDispatcher = request.getRequestDispatcher("/next");
+            
+     // request, response 객체 모두 forward를 통해 다음 Servlet으로 전달
+     requestDispatcher.forward(request, response);
+}
+```
+
+
+NextServlet.java
+
+ 
+```
+protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     // request 내 attribute들은 Object로 저장되기 때문에, 형 변환을 거쳐야 한다. 
+     int takenValue = (Integer)request.getAttribute("key");
+}
+```
 
 <img src="https://github.com/Garamda/WebProgramming/blob/master/forward.png" width=80%>
 
@@ -149,7 +179,7 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
 비교 | Redirect | Forward
 :---: | :---: | :---:
-URL 주소 | O | X
+URL 주소 변경 | O | X
 요청 | 2번 (서로 다른 요청/응답 객체) | 1번
 
 <br>
@@ -353,3 +383,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Git] 좋은 Git 커밋 메시지를 작성하는 방법 : https://meetup.toast.com/posts/106
 
 * [https] https://webactually.com/2018/11/http%EC%97%90%EC%84%9C-https%EB%A1%9C-%EC%A0%84%ED%99%98%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/
+
+* [RequestDispatcher] https://dololak.tistory.com/502
