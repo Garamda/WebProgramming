@@ -32,17 +32,12 @@
 <br>
 
 - Servlet
-
      - 자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역할
-     
      - 요청이 왔을 때 응답을 해야하는 모든 내용이 구현되는 부분
-
      - Annotation과 함께 사용하는 URL Mapping을 통해 URL 요청을 처리할 수 있다.
-
+     - 하나의 서블릿이 여러 개의 URL 요청을 처리할 수 있다. (/*)
      - WAS에 동작하는 Java 클래스
-
      - Servlet은 HttpServlet 클래스를 상속받아야 함
-     
      - Servlet과 JSP로부터 최상의 결과를 얻으려면, 두 가지를 조화롭게 사용해야 함
      - ex) 웹 페이지를 구성 화면(html)은 JSP로, 복잡한 프로그래밍은 서블릿으로 구현
 
@@ -210,11 +205,32 @@ URL 주소 변경 | O | X
 <br>
 
 - Scope
-
-     - Application : 웹 어플리케이션이 시작되고 종료될 때까지 변수가 유지 되는 경우 사용
-     - Session : 웹 브라우저별로 변수가 관리되는 경우 사용
+     - Page : 페이지 0내에서 지역변수처럼 사용
      - Request : http 요청을 WAS가 받아서 웹 브라우저에게 응답할 때까지 변수가 유지 되는 경우 사용
-     - Page : 페이지 내에서 지역변수처럼 사용
+     - Session : 웹 브라우저별로 변수가 관리되는 경우 사용, 상태 유지 시 사용
+     - Application : 웹 어플리케이션이 시작되고 종료될 때까지 변수가 유지 되는 경우 사용
+<img src="https://github.com/Garamda/WebProgramming/blob/master/scope.jpg" width=40%>
+
+<br>
+
+- Page scope
+     - 특정 서블릿이나 JSP가 실행되는 동안에만 정보를 유지 하고 싶은 경우 사용
+     - PageContext 추상 클래스를 사용
+     - JSP 페이지에서 pageContext라는 내장 객체로 사용 가능
+     - forward가 될 경우 해당 Page scope에 지정된 변수는 사용할 수 없음 (서블릿이 바뀌므로 page scope도 전환 됨)
+     - 다른 Scope들과 달리, 마치 지역변수처럼 사용 됨. 즉, 해당 JSP나 서블릿이 실행되는 동안에만 정보를 유지하고자 할 때 사용 됨
+     - JSP에서 pageScope에 값을 저장한 후 해당 값을 EL표기법 등에서 사용할 때 사용 됨
+<br>
+
+- Request scope
+     - http 요청을 WAS가 받아서 웹 브라우저에게 응답할 때까지 변수값을 유지하고자 할 경우 사용한다.
+     - HttpServletRequest 객체를 사용한다.
+     - JSP에서는 request 내장 변수를 사용한다.
+     - 서블릿에서는 HttpServletRequest 객체를 사용한다.
+     - 값을 저장할 때는 request 객체의 setAttribute()메소드를 사용한다.
+     - 값을 읽어 들일 때는 request 객체의 getAttribute()메소드를 사용한다.
+     - forward 시 값을 유지하고자 사용한다.
+     - 앞에서 forward에 대하여 배울 때 forward 하기 전에 request 객체의 setAttribute() 메소드로 값을 설정한 후, 서블릿이나 jsp에게 결과를 전달하여 값을 출력하도록 하였는데 이렇게 포워드 되는 동안 값이 유지되는 것이 Request scope를 이용했다고 합니다.
     
 <br>
 
