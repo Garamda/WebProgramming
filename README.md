@@ -7,7 +7,7 @@
 - WAS
      - Web Application Server의 줄임말
      
-     <img src="https://github.com/Garamda/WebProgramming/tree/master/images/was.PNG" width=60%>
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/was.PNG" width=60%>
      
 <br>
  
@@ -80,7 +80,7 @@ WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 des
 
 - 요청과 응답 
 
-<img src="https://github.com/Garamda/WebProgramming/blob/master/HttpServletRequestResponse.PNG" width=80%> 
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/HttpServletRequestResponse.PNG" width=80%> 
 
 WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
@@ -131,7 +131,7 @@ redirect01.jsp
 ```response.sendRedirect("redirect02.jsp");```
 
 
-<img src="https://github.com/Garamda/WebProgramming/blob/master/redirect2.PNG" width=80%>
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/redirect2.PNG" width=80%>
 
 
 <br>
@@ -176,7 +176,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
      int takenValue = (Integer)request.getAttribute("key");
 }
 ```
-<img src="https://github.com/Garamda/WebProgramming/blob/master/forward.png" width=80%>
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/forward.png" width=80%>
 
 
 <br>
@@ -209,7 +209,7 @@ URL 주소 변경 | O | X
      - Request : http 요청을 WAS가 받아서 웹 브라우저에게 응답할 때까지 변수가 유지 되는 경우 사용
      - Session : 웹 브라우저별로 변수가 관리되는 경우 사용, 상태 유지 시 사용
      - Application : 웹 어플리케이션이 시작되고 종료될 때까지 변수가 유지 되는 경우 사용
-<img src="https://github.com/Garamda/WebProgramming/blob/master/scope.jpg" width=40%>
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/scope.jpg" width=40%>
 
 <br>
 
@@ -257,13 +257,13 @@ URL 주소 변경 | O | X
      - Parser와 Rendering Engine이 html, css를 처리하는 과정
 
      
-     <img src="https://github.com/Garamda/WebProgramming/blob/master/parsingtree.png" width=60%>
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/parsingtree.png" width=60%>
 
 <br> 
      
 - DOM tree (Document Object Model tree)
 
-     <img src="https://github.com/Garamda/WebProgramming/blob/master/domtree.png" width=40%> 
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/domtree.png" width=40%> 
 
      - 브라우저에서는 html element를 DOM tree로 저장합니다.
 
@@ -280,7 +280,7 @@ URL 주소 변경 | O | X
      - JSP는 WAS에 의해 서블릿으로 바뀌어 동작함 (<% %>에 해당하는 부분)
      - JSP Life Cycle
      
-     <img src="https://github.com/Garamda/WebProgramming/blob/master/jspLifecycle.png" width=40%> 
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/jspLifecycle.png" width=40%> 
      
      - 서블릿과 유사한 라이프 사이클로 이해할 수 있다.
      
