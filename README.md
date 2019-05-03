@@ -7,7 +7,7 @@
 - WAS
      - Web Application Server의 줄임말
      
-     <img src="https://github.com/Garamda/WebProgramming/blob/master/was.PNG" width=60%>
+     <img src="https://github.com/Garamda/WebProgramming/tree/master/images/was.PNG" width=60%>
      
 <br>
  
@@ -50,7 +50,7 @@
 
 <br>
 
-<img src="https://github.com/Garamda/WebProgramming/blob/master/servlet_lifecycle.PNG" width=40%>
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/servlet_lifecycle.PNG" width=40%>
 
 <br>
 
