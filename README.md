@@ -125,8 +125,14 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
           - 때문에 첫 요청과 두 번째 요청의 Request, Response는 다른 객체 
           - 클라이언트는 서버로부터 받은 상태 값이 302이면 Location 헤더값으로 재요청
           - 서블릿은 HttpServletResponse 클래스의 sendRedirect() 메소드를 사용함
+          
+     - 예제 코드
      
-<img src="https://github.com/Garamda/WebProgramming/blob/master/redirect.PNG" width=80%>
+redirect01.jsp
+     ```response.sendRedirect("redirect02.jsp");```
+
+
+<img src="https://github.com/Garamda/WebProgramming/blob/master/redirect2.PNG" width=80%>
 
 
 <br>
