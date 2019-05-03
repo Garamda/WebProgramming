@@ -34,6 +34,8 @@
 - Servlet
 
      - 자바 웹 어플리케이션의 구성요소 중 동적인 처리를 하는 프로그램의 역할
+     
+     - 요청이 왔을 때 응답을 해야하는 모든 내용이 구현되는 부분
 
      - Annotation과 함께 사용하는 URL Mapping을 통해 URL 요청을 처리할 수 있다.
 
@@ -64,22 +66,17 @@ WAS는 서블릿 요청을 받으면 해당 서블릿이 메모리에 있는지 
 
 메모리에 있다면,
 
-
 - service() 실행
-
-<br>
-
-요청이 왔을 때 응답을 해야하는 모든 내용이 구현되는 부분
-
-개발자가 service()를 override하지 않았다면, Servlet의 부모 클래스인 HttpServlet의 service()가 실행 됨
-
-<br>
 
 즉, 하나의 서블릿은 메모리에 한 번만 올린다.
 
 <br>
 
-WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 destroy() 메소드를 실행. 즉, 메모리에서 해당 서블릿을 해제함. 그 후 메모리에 reload ->  init()하는 과정을  
+cf) 개발자가 service()를 override하지 않았다면, Servlet의 부모 클래스인 HttpServlet의 service()가 실행 됨
+
+<br>
+
+WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 destroy() 메소드를 실행. 즉, 메모리에서 해당 서블릿을 해제함. 그 후 메모리에 reload ->  init()하는 과정을 거친다.
 
 <br>
 
@@ -89,10 +86,10 @@ WAS가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 des
 
 WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 
-     - 요청할 때 가지고 있는 정보를 HttpServletRequest 객체를 생성하여 저장
-     - 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse 객체를 생성
-     - 생성된 HttpServletRequest, HttpServletResponse 객체를 서블릿에 전달
-     - 즉, HttpServletRequest, HttpServletResponse 생성의 주체는 WAS
+- 요청할 때 가지고 있는 정보를 HttpServletRequest 객체를 생성하여 저장
+- 웹 브라우저에게 응답을 보낼 때 사용하기 위하여 HttpServletResponse 객체를 생성
+- 생성된 HttpServletRequest, HttpServletResponse 객체를 서블릿에 전달
+- 즉, WAS는 HttpServletRequest, HttpServletResponse 생성의 주체
 
 <br> 
 
