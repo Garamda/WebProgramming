@@ -323,42 +323,105 @@ applicationscope01.jsp
      - ex) 프로그램의 소스 파일 위치, 컴파일 된 파일의 위치 등
      - 편리하게 의존성 라이브러리를 관리할 수 있음
      - 모든 개발자가 Maven의 설정을 따라 일관된 방식으로 빌드를 수행 함
- 
+     - 추가 설명
+          - scope 
+               * compile : scope를 따로 설정하지 않는 경우 기본값. 컴파일 할 때 필요. 테스트 및 런타임에도 클래스 패스에 포함 됨. 
+               * runtime : 런타임에 필요. 컴파일 시에는 필요하지 않지만, 실행 시에 필요한 경우입니다.  ex) JDBC 드라이버
+               * provided : 컴파일 시에 필요하지만, 실제 런타임 때에는 컨테이너 같은 것에서 제공되는 모듈. 배포 시 제외 됨.  ex) Servlet, JSP API 등. 
+               * test : 테스트 코드를 컴파일 할 때 필요. 테스트 시 클래스 패스에 포함되며, 배포 시 제외 됨.
+               * 예시
+                    ```
+                    <dependency>
+                         <groupId>javax.servlet</groupId>
+                         <artifactId>javax.servlet-api</artifactId>
+                         <version>3.1.0</version>
+                         <scope>provided</scope> // <- 여기
+                    </dependency>
+                    ```
+
 <br>
 
-- JDBC
+- JDBC (Java Database Connectivity)
+     - 자바를 통한 DB 접속, SQL query 실행, 실행 결과로 얻어진 데이터를 핸들링하는 방법 제공
+     - 자바 프로그램 내에서 SQL문을 실행하기 위한 자바 API
+     - Java는 표준 인터페이스인 JDBC API를 제공
+     - DB 벤더, 기타 써드파티에서는 JDBC 인터페이스를 구현한 드라이버(driver)를 제공
+     - 실행 단계
+          - import java.sql.*;
+          - 드라이버 로드 : 사용하는 DB에 맞는 객체 제공
+          - Connection 객체 생성 : DB에 접속
+          - Statement 객체 생성 및 질의 수행 : query를 생성하고 수행
+          - ResultSet 객체 생성 (SQL문에 결과물이 있다면)
+               - SELECT : row들을 return
+               - INSERT, UPDATE, DELETE : 성공/실패 여부를 return
+          - 모든 객체를 닫는다 :  객체를 생성한 반대의 순서로 접속을 끊는다
+          
+          <br>
+          <img src="https://github.com/Garamda/WebProgramming/blob/master/images/jdbc.PNG" width=70%>
 
 <br>
 
 - Web API
+     - REST API의 모든 규칙을 준수하지는 못하는 API
+     
 
 <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
 
 - HTTP Status Code
 
      - 100 (조건부 응답)
      - 200 (성공)
+          - 200 : 클라이언트의 요청을 성공적으로 수행 함
+          - 201 : 클라이언트가 요청한 리소스가 성공적으로 생성 됨 (POST 요청에 대한 응답)
      - 300 (리다이렉션 완료)
      - 400 (요청 오류)
-          - 404(Not Found): 서버가 요청한 페이지(Resource)를 찾을 수 없음. ex) 서버에 존재하지 않는 페이지에 대해 요청을 보낸 경우
+          - 401 : 클라이언트가 인증되지 않은 상태에서 보호된 리소스를 요청함.  ex) 로그인 하지 않고 특정 정보를 요청하는 경우
+          - 404(Not Found): 서버가 요청한 페이지(Resource)를 찾을 수 없음.  ex) 서버에 존재하지 않는 페이지에 대해 요청을 보낸 경우
+          - 405 : 클라이언트의 요청에 사용 불가능한 method가 있음.  ex) GET만을 처리할 수 있지만 POST 요청을 보낸 경우
      - 500 (서버 오류)
      
+<br> <br> 
+
+- Spring Framework
+     - 약 20개의 모듈로 구성되어 있으며, 필요한 모듈만 가져다 사용할 수 있음
+     - Core 계층은 알고 있어야 함
+     
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/springframework.png" width=70%>
+
+
+
+- Container
+
+컨테이너는 인스턴스의 생명주기를 관리하며, 생성된 인스턴스에게 추가적인 기능을 제공합니다.
+
+예를 들어, Servlet을 실행해주는 WAS는 Servlet 컨테이너를 가지고 있다고 말합니다.
+
+WAS는 웹 브라우저로부터 서블릿 URL에 해당하는 요청을 받으면, 서블릿을 메모리에 올린 후 실행합니다.
+
+개발자가 서블릿 클래스를 작성했지만, 실제로 메모리에 올리고 실행하는 것은 WAS가 가지고 있는 Servlet 컨테이너입니다.
+
+Servlet컨테이너는 동일한 서블릿에 해당하는 요청을 받으면, 또 메모리에 올리지 않고 기존에 메모리에 올라간 서블릿을 실행하여 그 결과를 웹 브라우저에게 전달합니다.
+
+컨테이너는 보통 인스턴스의 생명주기를 관리하며, 생성된 인스턴스들에게 추가적인 기능을 제공하는 것을 말합니다.
+
+
+- IoC (Inversion of Control)
+
+컨테이너가 코드 대신 오브젝트의 제어권을 갖고 있어 IoC(제어의 역전)이라 합니다.
+
+예를 들어, 서블릿 클래스는 개발자가 만들지만, 그 서블릿의 메소드를 알맞게 호출하는 것은 WAS입니다.
+
+이렇게 개발자가 만든 어떤 클래스나 메소드를 다른 프로그램이 대신 실행해주는 것을 제어의 역전이라고 합니다.
+
+- DI (Dependency Injection)
+
+DI는 의존성 주입이란 뜻을 가지고 있으며, 클래스 사이의 의존 관계를 빈(Bean) 설정 정보를 바탕으로 컨테이너가 자동으로 연결해주는 것을 말합니다.
+
+
+
+
+
 <br>
 
 # FrontEnd
