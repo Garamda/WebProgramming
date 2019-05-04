@@ -254,14 +254,76 @@ URL 주소 변경 | O | X
      - 값을 저장하고 읽어 들일 때는 application 객체의 setAttribute(), getAttribute() 메소드를 사용
      - 모든 클라이언트가 공통으로 사용해야 할 값들이 있을 때 사용
      - 예제 코드
-     ``` ```
+     
+ApplicationScope01.java
+``` 
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     ServletContext application = getServletContext();
+     int value = 1;
+     application.setAttribute("value", value);  
+}     
+```
+<br>
+
+ApplicationScope02.java
+
+```
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     response.setContentType("text/html; charset=UTF-8");    
+     PrintWriter out = response.getWriter();
+        
+     ServletContext application = getServletContext();
+                
+     try {
+          int value = (int)application.getAttribute("key");
+          value++;
+          application.setAttribute("value", value);
+     }catch(NullPointerException ex) {
+          out.println("value가 설정되지 않습니다.")
+     }
+}
+        
+// 1. Application scope에 저장된 value는 2가 되었다.
+// 2. ApplicationScope01.java에서 먼저 setAttribute()가 되지 않았을 경우를 대비해 try catch로 예외를 처리한다.
+```
+<br>
 
 
+applicationscope01.jsp
+
+```
+<body>
+<%
+    try{
+        int value = (int)application.getAttribute("value");
+        value += 2;
+        application.setAttribute("value", value);
+%>
+        <h1><%=value %></h1>
+<%        
+    }catch(NullPointerException ex){
+%>
+        <h1>설정된 값이 없습니다.</h1>
+<%        
+    }
+%>
+
+</body>
+
+// 1. JSP에선 내장 객체 application을 바로 사용할 수 있다.
+// 2. 이전 ApplicationScope에서 setAttribute()가 되지 않았을 경우를 대비해 try catch로 예외를 처리한다.
+```
 
 <br>
 
 - Maven
 
+     - 빌드(Build), 패키징, 문서화, 테스트, 테스트 리포팅, git, 의존성 관리, 형상관리서버와 연동(SCMs), 배포 등의 작업을 손쉽게 할 수 있음
+     - CoC(Convention over Configuration)를 따라 많은 반복 작업들을 자동화 함 
+     - ex) 프로그램의 소스 파일 위치, 컴파일 된 파일의 위치 등
+     - 편리하게 의존성 라이브러리를 관리할 수 있음
+     - 모든 개발자가 Maven의 설정을 따라 일관된 방식으로 빌드를 수행 함
+ 
 <br>
 
 - JDBC
@@ -270,6 +332,33 @@ URL 주소 변경 | O | X
 
 - Web API
 
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+- HTTP Status Code
+
+     - 100 (조건부 응답)
+     - 200 (성공)
+     - 300 (리다이렉션 완료)
+     - 400 (요청 오류)
+          - 404(Not Found): 서버가 요청한 페이지(Resource)를 찾을 수 없음. ex) 서버에 존재하지 않는 페이지에 대해 요청을 보낸 경우
+     - 500 (서버 오류)
+     
 <br>
 
 # FrontEnd
@@ -452,3 +541,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [https] https://webactually.com/2018/11/http%EC%97%90%EC%84%9C-https%EB%A1%9C-%EC%A0%84%ED%99%98%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/
 
 * [RequestDispatcher] https://dololak.tistory.com/502
+
+* [HTTP Status Code] https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C
