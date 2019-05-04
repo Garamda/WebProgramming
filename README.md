@@ -410,6 +410,7 @@ applicationscope01.jsp
 
 <br>
 DI가 적용되지 않은 예 : 개발자가 직접 인스턴스를 생성
+
 ```
 class Engine {
 
@@ -422,6 +423,7 @@ class Car {
 
 <br>
 DI가 적용된 예 : 컨테이너가 v5 변수에 인스턴스를 할당
+
 ```
 @Component
 class Engine {
