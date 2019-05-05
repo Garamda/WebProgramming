@@ -481,7 +481,7 @@ class Car {
     
 <br>
 
-- DAO (Data Transfer Object)
+- DAO (Data Access Object)
      - 데이터를 조회하거나 조작하는 기능을 전담하도록 만든 객체
      - 보통 데이터베이스를 조작하는 기능을 전담하는 목적으로 만들어 짐
      
@@ -492,13 +492,60 @@ class Car {
      - 아래 그림은 여러 클라이언트가 Connection Pool에서 Connection을 사용하고 반납하는 예를 보여준다.
 <br>
 
-<img src="https://github.com/Garamda/WebProgramming/blob/master/images/connectionpool.jpg" width=70%>
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/connectionpool.jpg" width=40%>
 
 <br>
 
 - DataSource
      - Connection Pool을 관리하는 목적으로 사용되는 객체
      - DataSource를 이용해 커넥션을 얻어오고 반납하는 등의 작업을 수행 함
+     
+<br>
+
+- MVC(Model-View-Controller)
+     - Model : View가 렌더링하는데 필요한 데이터.  ex)사용자가 요청한 상품 목록
+     - View : 실제로 보이는 부분이며, Model을 사용해 렌더링을 함. 뷰는 JSP, JSF, PDF, XML 등으로 결과를 표현.
+     - Controller : 사용자의 액션에 응답하는 컴포넌트. Controller는 Model을 업데이트하고, 다른 액션을 수행 함.
+     
+<br>
+
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/MVC.png" width=60%>
+
+<br>
+
+이 MVC 구조가 Spring Framework에 구현되어 있음
+
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/springWebModule.png" width=60%>
+
+<br>
+
+- Spring MVC 
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/SpringMVC.png" width=60%>
+
+<br>
+
+- DispatcherServlet
+     - SpringMVC 이해의 핵심
+     - 프론트 컨트롤러 : 요청을 처리하지 않고 넘겨주기만 함
+     - 클라이언트의 모든 요청을 받은 후, 요청을 처리할 컨트롤러와 메소드가 무엇인지 HandlerMapping에게 물어 봄(그 정보는 개발자가 설정한 xml 파일이나 Annotation에 들어있다). 그 후 이를 처리할 핸들러(HandlerAdapter)에게 넘김
+     - 핸들러가 처리한 결과를 받아 사용자에게 응답 결과를 보여줌(ViewResolver)
+     - 이처럼 여러 컴포넌트를 이용해 작업을 처리함
+     
+<br>
+
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/DispatcherServlet.png " width=60%>    
+
+<br>
+
+- DispatcherServlet의 각 요소
+- HandlerMapping
+- HandlerAdpater
+- ViewResolver
+
+-> 이 4가지는 추후에 깊히 익힐 것. Spring Framework의 동작 과정을 익히는 데 필수.
+
+<br>
+
 
 # FrontEnd
 
