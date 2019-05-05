@@ -450,13 +450,55 @@ class Car {
     
 <br>
 
-@Configuration
-@ComponentScan
-@Component
-@Autowired
+- Java Config를 이용한 설정
+     - @Configuration : 스프링 설정 클래스를 선언하는 어노테이션
+     - @Bean : bean을 정의하는 어노테이션
+     - @ComponentScan : @Controller, @Service, @Repository, @Component 어노테이션이 붙은 클래스를 찾아 컨테이너에 등록 (메모리에 올림)
+     - @Component : 컴포넌트 스캔의 대상이 되는 어노테이션 중 하나로써, 주로 유틸이나 기타 지원 클래스에 붙임
+     - @Autowired : 주입 대상이되는 bean을 컨테이너에 찾아 주입하는 어노테이션
+     - Tip : @Controller, @Service, @Repository, @Component 어노테이션이 붙어 있는 객체들은 @ComponentScan을 이용해서 읽어들여 메모리에 올리고 DI를 주입, 이러한 어노테이션이 붙어 있지 않은 객체는 @Bean 어노테이션을 이용하여 직접 생성해주는 방식으로 클래스들을 관리하면 편리
 
 <br>
 
+- Spring JDBC
+     - org.springframework.jdbc.core
+          - JdbcTemplate 및 관련 Helper 객체 제공
+     - JDBC Template
+          - org.springframework.jdbc.core에서 가장 중요한 클래스
+          - Statement의 생성과 실행을 처리
+          - 리소스 생성, 해지를 처리해서 연결을 닫는 것을 잊어 발생하는 문제 등을 피할 수 있도록 함
+          - SQL 조회, 업데이트, 저장 프로시저 호출, ResultSet 반복호출 등을 실행
+          - JDBC 예외가 발생할 경우 org.springframework.dao 패키지에 정의되어 있는 일반적인 예외로 변환
+
+
+<br>
+
+- DTO (Data Transfer Object)
+    - 계층 간 데이터 교환을 위한 Java Bean
+    - 계층이란 컨트롤러 뷰, 비지니스 계층, 퍼시스턴스 계층을 의미합니다.
+    - 로직을 가지고 있지 않은 순수한 데이터 객체
+    - 필드, getter, setter를 가짐. 추가적으로 toString(), equals(), hashCode()등의 Object 메소드를 오버라이딩 할 수 있음
+    
+<br>
+
+- DAO (Data Transfer Object)
+     - 데이터를 조회하거나 조작하는 기능을 전담하도록 만든 객체
+     - 보통 데이터베이스를 조작하는 기능을 전담하는 목적으로 만들어 짐
+     
+- Connection Pool    
+     - DB 연결에는 많은 비용이 들어가므로, 미리 Connection 여러 개 맺어 둔다.
+     - Connection이 필요하면 Connection Pool에게 빌려서 사용한 후 반납한다.
+     - Connection 사용 후 이를 반납하지 않으면, 속도가 느려진다.
+     - 아래 그림은 여러 클라이언트가 Connection Pool에서 Connection을 사용하고 반납하는 예를 보여준다.
+<br>
+
+<img src="https://github.com/Garamda/WebProgramming/blob/master/images/connectionpool.jpg" width=70%>
+
+<br>
+
+- DataSource
+     - Connection Pool을 관리하는 목적으로 사용되는 객체
+     - DataSource를 이용해 커넥션을 얻어오고 반납하는 등의 작업을 수행 함
 
 # FrontEnd
 
