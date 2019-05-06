@@ -546,6 +546,12 @@ class Car {
 
 <br>
 
+- @EnableWebMvc
+     - DispatcherServlet의 RequestMappingHandlerMapping, RequestMappingHandlerAdapter, ExceptionHandlerExceptionResolver, MessageConverter 등 Web에 필요한 빈들을 대부분 자동으로 설정해준다.
+     - cf) 기본 설정 이외의 설정이 필요하다면 WebMvcConfigurerAdapter를 상속받도록 Java config class를 작성한 후, 필요한 메소드를 오버라이딩 하도록 한다.
+
+<br>
+
 - Interceptor
      - Dispatcher servlet에서 Handler(Controller)로 요청을 보낼 때, Handler에서 Dispathcer servlet으로 응답을 보낼 때 동작합니다.
      
