@@ -546,6 +546,16 @@ class Car {
 
 <br>
 
+- Interceptor
+     - Dispatcher servlet에서 Handler(Controller)로 요청을 보낼 때, Handler에서 Dispathcer servlet으로 응답을 보낼 때 동작합니다.
+     
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/interceptor.jpg " width=70%> 
+<br>
+
+- Argument Resolver
+
+<br>
+
 
 # FrontEnd
 
@@ -629,9 +639,13 @@ cf) 두 개념은 서로 의존관계가 없이 분리되어 있는 개념. (Par
      - Stateless Protocol(http)을 극복하고자 클라이언트 / 서버에 상태를 저장하는 것
      
      - Cookie : 유저의 상태를 클라이언트에 저장
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/cookie1.png" width=40%> 
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/cookie2.png" width=40%> 
      
      - Session : 유저의 상태를 서버에 저장
-
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/session1.png" width=40%> 
+     <img src="https://github.com/Garamda/WebProgramming/blob/master/images/session2.png" width=40%> 
+     
      - Session의 저장 방식
 
 
