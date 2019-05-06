@@ -562,6 +562,9 @@ class Car {
 
 <br>
 
+- Hibernate VS Mybatis
+
+<br>
 
 # FrontEnd
 
@@ -749,3 +752,7 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [RequestDispatcher] https://dololak.tistory.com/502
 
 * [HTTP Status Code] https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C
+
+* [Hibernate VS Mybatis 1] https://stackoverflow.com/questions/1984548/hibernate-vs-ibatis
+
+* [Hibernate VS Mybatis 2] https://okky.kr/article/286812
