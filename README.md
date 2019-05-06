@@ -566,6 +566,21 @@ class Car {
 
 <br>
 
+- @RestController
+     - Spring 4 에서 Rest API, Web API를 개발하기 위해 등장한 Annotation
+     - 이전 버전의 @Controller와 @ResponseBody를 포함
+     
+<br>
+
+- MessageConvertor
+     - @RestController를 이해하는 데 중요함
+     - HTTP Request를 자바 객체로 변환하는 역할
+     - Response Body를 클라이언트에게 전달할 수 있도록 JSON으로 변환하는 역할
+     - @ResponseBody, @RequestBody
+     - @EnableWebMvc로 인한 기본 설정
+    
+<br>  
+
 # FrontEnd
 
 - 브라우저
