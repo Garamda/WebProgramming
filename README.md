@@ -544,6 +544,8 @@ class Car {
 
 -> 이 4가지는 추후에 깊히 익힐 것. Spring Framework의 동작 과정을 익히는 데 필수.
 
+참고 보강 자료 : http://blog.naver.com/duco777/220605479481
+
 <br>
 
 - @EnableWebMvc
@@ -771,3 +773,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Hibernate VS Mybatis 1] https://stackoverflow.com/questions/1984548/hibernate-vs-ibatis
 
 * [Hibernate VS Mybatis 2] https://okky.kr/article/286812
+
+* [Spring 요청 처리 과정] http://blog.naver.com/duco777/220605479481
