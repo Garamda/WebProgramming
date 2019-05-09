@@ -740,6 +740,12 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 - Redis
 
      - https://goodgid.github.io/Redis/
+     
+<br>
+
+- 예외 처리
+
+     - https://okky.kr/article/362305
 <br>
 
 - https
@@ -775,3 +781,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Hibernate VS Mybatis 2] https://okky.kr/article/286812
 
 * [Spring 요청 처리 과정] http://blog.naver.com/duco777/220605479481
+
+* [예외 처리에 대한 6 가지 화두] https://okky.kr/article/362305
