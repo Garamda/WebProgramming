@@ -783,3 +783,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Spring 요청 처리 과정] http://blog.naver.com/duco777/220605479481
 
 * [예외 처리에 대한 6 가지 화두] https://okky.kr/article/362305
+
+* [자바에서 null을 안전하게 다루는 방법] https://www.slideshare.net/gyumee/null-142590829?fbclid=IwAR2NvlfYGCfYZ7COqvTYQPbenIS8pMlIaS_yNmni0PeWTZLQ-pZts9saZBQ
