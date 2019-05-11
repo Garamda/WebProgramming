@@ -787,3 +787,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [자바에서 null을 안전하게 다루는 방법] https://www.slideshare.net/gyumee/null-142590829?fbclid=IwAR2NvlfYGCfYZ7COqvTYQPbenIS8pMlIaS_yNmni0PeWTZLQ-pZts9saZBQ
 
 * [Spring Test] https://www.slideshare.net/ssuser59a869/ksug-2019?fbclid=IwAR2UcYpT58l7AUEPj8vAXIUpllk4meCTlLk4aGDZJSnaECgMwpRR1sVkYAc
+
+* [자바에서 final 멤버 변수에 관례적으로 static을 붙이는 이유] https://djkeh.github.io/articles/Why-should-final-member-variables-be-conventionally-static-in-Java-kor/
