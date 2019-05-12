@@ -755,6 +755,10 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 <br>
 
+- JVM Garbage Collection 
+
+<br>
+
 ## 출처
 
 * Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
@@ -794,3 +798,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [자바에서 final 멤버 변수에 관례적으로 static을 붙이는 이유] https://djkeh.github.io/articles/Why-should-final-member-variables-be-conventionally-static-in-Java-kor/
 
 * [@Transactional 꼭 설정해야 하는건가요?] https://okky.kr/article/437870
+
+* [JVM Garbage Collection] https://perfectacle.github.io/2019/05/07/jvm-gc-basic/
