@@ -800,3 +800,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [@Transactional 꼭 설정해야 하는건가요?] https://okky.kr/article/437870
 
 * [JVM Garbage Collection] https://perfectacle.github.io/2019/05/07/jvm-gc-basic/
+
+* [Stack Trace 읽는 법] https://okky.kr/article/338405
