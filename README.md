@@ -801,6 +801,8 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 * [JVM Garbage Collection] https://perfectacle.github.io/2019/05/07/jvm-gc-basic/
 
-* [Stack Trace 읽는 법] https://okky.kr/article/338405
+* [Stack Trace 읽는 법 1] https://okky.kr/article/338405
+
+* [Stack Trace 읽는 법 2] https://hashcode.co.kr/questions/2162/stack-trace%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%97%90%EB%9F%AC%EB%A5%BC-%EB%94%94%EB%B2%84%EA%B9%85%ED%95%A0-%EB%95%8C-%EA%B7%B8%EA%B2%83%EC%9D%84-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94
 
 * [에러 대처 방법] https://okky.kr/article/311337
