@@ -948,6 +948,12 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 <br>
 
+### 웹 아키텍처
+- https://blog.rhostem.com/posts/2018-07-22-web-architecture-101
+- AOMC에 적용하면서 (코드 상으로 반영할 수 없다면 개념 상으로라도) 하나씩 정리해볼 것
+
+<br>
+
 ## 출처
 
 * Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
