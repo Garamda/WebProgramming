@@ -939,9 +939,29 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
           
      - 각 팀은 상호 기능적(cross-functional)임. 즉, UI, UX, DB, PM 등 개발을 위해 필요한 모든 범위의 기술 스택과 직군을 포함 할 수 있음
          
-### Redis
+### Redis (REmote DIctionary Server)
 
-- https://goodgid.github.io/Redis/
+- 디스크가 아닌 메모리 기반의 데이터 저장소
+- NoSQL & Cache 솔루션
+- 명시적으로 삭제, Expire를 설정하지 않으면 데이터는 삭제되지 않는다. 즉, 영구적으로 보존된다.
+- 데이터베이스로도 사용될 수 있는 기술이다.
+- NoSQL 중에서도 Redis가 주목 받는 이유
+     - 데이터 저장소로 입출력이 가장 빠른 메모리를 채택
+     - 단순한 구조인 Key-Value 방식을 통해 빠른 속도를 보장
+     - 캐시 및 데이터 스토어에 유리
+     - 다양한 API 지원
+     - 메모리를 활용하면서 영속적인 데이터 보존이 가능하다.
+- 단점
+     - 메모리 파편화가 발생하기 쉽다
+          - 메모리를 2배로 사용한다.
+          - Copy-on-Write 방식으로 인한 문제점
+               - Redis를 사용할 때는 데이터 변경이 잦기 때문에, 실제 메모리 크기만큼 자식 프로세스가 복사하게 된다.
+               - 그래서 실제로 필요한 메모리 양보다 더 많은 메모리를 사용하게 된다.
+               - 추후 이 문제의 원인에 대한 자세한 정리 : http://redisgate.kr/redis/configuration/copy-on-write.php 
+
+ 
+
+
      
 <br>
 
@@ -978,6 +998,8 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Micro Service Architecture] : http://channy.creation.net/articles/microservices-by-james_lewes-martin_fowler
 
 * [Redis] 개념과 특징 : https://goodgid.github.io/Redis/
+
+* [Redis] Copy on Write로 인한 메모리 사용량 증가 문제 진단: http://redisgate.kr/redis/configuration/copy-on-write.php
 
 * [SOLID] 객체지향 개발 5대 원리 : http://www.nextree.co.kr/p6960/?fbclid=IwAR0uL_OPI5kAx8r1yH6bObZ3MpfyckHkqWaEZ1gLwI-M-tU1KvuUuQ7D-1A
 
