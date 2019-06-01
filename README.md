@@ -961,8 +961,19 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
  
 
+### Nginx
 
-     
+- 리버스 프록시(reverse proxy)
+     - 클라이언트가 가짜 서버에 요청(request)하면, 프록시 서버가 배후 서버(reverse server)로부터 데이터를 가져오는 역할
+     - 여기서 프록시 서버가 Nginx, 리버스 서버가 응용 프로그램 서버를 의미
+     - 리버스 프록시(Nginx)를 두는 이유는 요청(request)에 대한 버퍼링이 있기 때문이다. 
+     - 클라이언트가 직접 App 서버에 직접 요청하는 경우, 프로세스 1개가 응답 대기 상태가 되어야만 한다. 
+     - 따라서 프록시 서버를 둠으로써 요청을 배분하는 역할을 한다.
+     - 보안을 향상시킨다. WAS는 보통 DB 서버와 연결되므로 WAS가 최전방에 있으면 WAS가 침입당할 경우 DB서버까지 같이 침입당하는 심각한 문제가 발생할 수 있다.
+
+
+<img src="https://raw.githubusercontent.com/Garamda/WebProgramming/master/images/Nginx.png">
+
 <br>
 
 ### 예외 처리
@@ -1034,3 +1045,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Stack Trace 읽는 법 2] https://hashcode.co.kr/questions/2162/stack-trace%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%97%90%EB%9F%AC%EB%A5%BC-%EB%94%94%EB%B2%84%EA%B9%85%ED%95%A0-%EB%95%8C-%EA%B7%B8%EA%B2%83%EC%9D%84-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94
 
 * [에러 대처 방법] https://okky.kr/article/311337
+
+* [Nginx] https://whatisthenext.tistory.com/123
