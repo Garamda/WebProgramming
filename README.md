@@ -1046,4 +1046,6 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 * [에러 대처 방법] https://okky.kr/article/311337
 
-* [Nginx] https://whatisthenext.tistory.com/123
+* [Nginx 1] https://whatisthenext.tistory.com/123
+
+* [Nginx 2] https://www.lesstif.com/pages/viewpage.action?pageId=21430345
