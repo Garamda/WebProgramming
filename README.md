@@ -996,6 +996,11 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 <br>
 
+### 웹 페이지 호출 과정에 대한 상세한 설명
+
+
+<br>
+
 ## 출처
 
 * Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
