@@ -998,6 +998,10 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 ### 웹 페이지 호출 과정에 대한 상세한 설명
 
+<br>
+
+### 시큐어 코딩 (Secure Coding)
+- https://needjarvis.tistory.com/174
 
 <br>
 
@@ -1054,3 +1058,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Nginx 1] https://whatisthenext.tistory.com/123
 
 * [Nginx 2] https://www.lesstif.com/pages/viewpage.action?pageId=21430345
+
+* [Secure Coding] https://needjarvis.tistory.com/174
