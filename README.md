@@ -1005,6 +1005,10 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 <br>
 
+### Hadoop
+
+<br>
+
 ## 출처
 
 * Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
