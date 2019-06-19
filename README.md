@@ -1009,6 +1009,11 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 
 <br>
 
+### OAuth
+- https://d2.naver.com/helloworld/24942
+
+<br>
+
 ## 출처
 
 * Web Programming : https://www.edwith.org/boostcourse-web/joinLectures/12952
@@ -1064,3 +1069,5 @@ Database storage : DB 상의 유저 정보와 함께 저장되므로 위 단점�
 * [Nginx 2] https://www.lesstif.com/pages/viewpage.action?pageId=21430345
 
 * [Secure Coding] https://needjarvis.tistory.com/174
+
+* [OAuth] https://d2.naver.com/helloworld/24942
