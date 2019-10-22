@@ -206,11 +206,9 @@ WAS는 웹 브라우저로부터 Servlet 요청을 받으면,
 <br>
 
 ### HttpServletResponse
+- WAS는 어떤 클라이언트가 요청을 보냈는지 알고 있고, 해당 클라이언트에게 응답을 보내기 위한 HttpServleResponse 객체를 생성하여 서블릿에 전달
 
-
-     - WAS는 어떤 클라이언트가 요청을 보냈는지 알고 있고, 해당 클라이언트에게 응답을 보내기 위한 HttpServleResponse 객체를 생성하여 서블릿에 전달
-
-     - 서블릿은 이 객체를 통해 content type, 응답 코드, 응답 메시지 등을 전송
+- 서블릿은 이 객체를 통해 content type, 응답 코드, 응답 메시지 등을 전송
 
 <br>
 
